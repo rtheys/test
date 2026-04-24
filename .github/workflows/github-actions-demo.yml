@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "triggered by a ${{ github.event_name }} event"
-      - run: echo 'This job is now running on a ${{ runner.os }} server"
+      - run: echo "This job is now running on a ${{ runner.os }} server"
       - name: "List files in repo"
         run: |
           ls ${{ github.workspace }}
-      - run: echo "Job status is ${{ job.status }}
+      - run: echo "Job status is ${{ job.status }}"
       - name: "Touch file on local disk"
         run: |
           touch /tmp/greetings
